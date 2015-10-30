@@ -1,0 +1,134 @@
+<!doctype html>  
+<html>
+<head>  
+  <meta charset="utf-8">  
+  <title>Contact Us</title> 
+<link rel="stylesheet" type="text/css" href="css/style2.css"> 
+ <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Miltonian+Tattoo' rel='stylesheet' type='text/css'>
+ 
+ <script
+src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+
+<script>
+var myCenter=new google.maps.LatLng(41.856845, -87.639268);
+
+function initialize()
+{
+var mapProp = {
+  center: myCenter,
+  zoom:15,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+  title:'Click to zoom'
+  });
+
+marker.setMap(map);
+
+// Zoom to 9 when clicking on marker
+google.maps.event.addListener(marker,'click',function() {
+  map.setZoom(9);
+  map.setCenter(marker.getPosition());
+  });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+ 
+</head>  
+
+<body>
+ <div class="container_contactus">
+ <div class="head">
+ <div class="logo1">
+ <div class="logo">
+ <img src="images/logo_black.png">
+ </div>
+ </div>
+ <div class="beans">
+ <div class="beans1">
+ <h3>WE BELIEVE IN CUSTOMER SATISFACTION</h3>
+ </div>
+ </div>
+ <div class="bar">
+ <div class="home">
+ <a href="index.html">Home</a>
+ </div>
+ <div class="abtus">
+ <a href="about.html">About Us</a>
+ </div>
+ <div class="ps">
+ <a href="services.html">Product & Services</a>
+ </div>
+ <div class="contus">
+ <a href="contact.html">Contact Us</a>
+ </div>
+ </div>
+ </div>
+ <div class="heading">
+ <h1 class="type1">CONTACT US</h1>
+ <p>Whether you are an existing customer who needs to schedule a service call, talk to your sales rep or ask about our latest technologies, or you and your company are looking
+ for more information on our services, our customer service department will handle your inquiry and get you to the person who can get you the information you are looking for.<br>
+You may contact us by phone or by submitting the contact form below. Your business is important to us and we pledge to respond to your inquiry within 24 hours.
+</p>
+ </div>
+ <div class="middlebar_contact">
+ <div id="googleMap" class="map"></div>
+ <div class="address">
+ <h1>Mailing Address</h1>
+<h3>1826 S Canal St
+Chicago, IL 60616<h3>
+<h1>
+Phone Number</h1>
+<img src="images/phone.jpg">
+<h3>
+800-555-1825<br>
+312-555-3000<h3>
+</h3>
+
+ </div>
+ </div>
+ <div class="contactus">
+ <div class="contactus_inner"><h1 class="type1">CONTACT US</h1>
+ <h2><input type="text" name="firstname" placeholder="First Name" class="type" ></h2>
+ <h2><input type="text" name="lastname" placeholder="Last Name" class="type" ></h2>
+ <h2><input type="text" name="email" placeholder="Email" class="type" ></h2>
+ <h2><input type="text" name="phone" placeholder="Phone Number" class="type" ></h2>
+ <h2><textarea name="comments" id="comments" rows="4" cols="47" placeholder="Write Your Comments">
+</textarea><br /></h2>
+ <input type="submit" value="Submit" name="submit" class="sub">
+ </div>
+ </div>
+ </div>
+ <div class="footer">
+ <p class="text1">1826 S Canal St
+Chicago, IL 60616<br>
+800-555-1825<br>
+312-555-3000</p>
+ <div class="bar1">
+ <div class="home1">
+ <a href="index.html">Home</a>
+ </div>
+ <div class="abtus1">
+ <a href="about.html">About Us</a>
+ </div>
+ <div class="ps1">
+ <a href="services.html">Product & Services</a>
+ </div>
+ <div class="contus1">
+ <a href="contact.html">Contact Us</a>
+ </div>
+ </div>
+ <a href="http://facebook.com"><img class="img1" src="images/facebook.png" target="blank"></a>
+ <a href="http://twitter.com"><img class="img2" src="images/twitter.png"></a>
+ <a href="http://youtube.com"><img class="img2" src="images/youtube.jpg"></a>
+ <a href="http://linkedin.com"><img class="img2" src="images/linked.jpg"></a>
+</div>
+ 
+ </body>
+ </html>
